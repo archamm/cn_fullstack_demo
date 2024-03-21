@@ -26,6 +26,8 @@ app.post('/items', async (req, res) => {
   const newItem = new Item({
     name: req.body.name
   });
+  console.log(req.body.name)
+
   await newItem.save();
   res.json(newItem);
 });
