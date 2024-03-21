@@ -6,14 +6,14 @@ function App() {
   const [itemName, setItemName] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/items')
+    axios.get('http://13.39.25.153:3001/items')
       .then(response => {
         setItems(response.data);
       });
   }, []);
 
   const addItem = () => {
-    axios.post('http://localhost:3001/items', { name: itemName })
+    axios.post('http://13.39.25.153:3001/items', { name: itemName })
       .then(response => {
         setItems([...items, response.data]);
         setItemName('');
