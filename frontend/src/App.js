@@ -18,6 +18,7 @@ function App() {
         setItems([...items, response.data]);
         setItemName('');
       });
+      console.log(itemName)
   };
 
   return (
